@@ -32,7 +32,7 @@ class LiftJump(AbstractExternalOperator):
         Sigma = self.function_space() #W
         mesh = Sigma.mesh()
         #tau = TestFunction(Sigma)
-        tau = Coargument(Sigma.dual(), 1)
+        tau = TestFunction(Sigma.dual())
         n = FacetNormal(mesh)
         OG_space = w.function_space() #V
         u = TrialFunction(OG_space)
